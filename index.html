@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafilo's Store</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/funcoes.js"></script>
+
+</head>
+<body>
+
+
+    <div class="container">
+    
+        <h1> <i id="cifrao" class="bi bi-basket-fill"></i> Rafilojas</h1>
+
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Produto</th>
+                    <th>Preço Unitário</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/celular.png" alt="Imagem de um celular" width="150">
+                        </td>
+                        <td>
+                            <div>Celular Top</div>
+                            <div><span class="produto-item">Código:</span> 292929</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_1">R$ 1.250</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(1, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_1">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(1, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_1">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/notebook.webp" alt="Imagem de um notebbook" width="200">
+                        </td>
+                        <td>
+                            <div>Notebook Bacana</div>
+                            <div><span class="produto-item">Código:</span> 070707</div>
+                            <div><span class="produto-item">Cor:</span> Cinza</div>
+                        </td>
+                        <td id="valor_2">R$ 2.300</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(2, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_2">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(2, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_2">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/televisao.webp" alt="Imagem de uma televisão" width="200">
+                        </td>
+                        <td>
+                            <div>Televisão Marota</div>
+                            <div><span class="produto-item">Código:</span> 201020</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_3">R$ 3.500</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(3, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_3">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(3, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_3">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/smartwatch.webp" alt="Imagem de um SmartWatch" width="200">
+                        </td>
+                        <td>
+                            <div>Relógio inteligente</div>
+                            <div><span class="produto-item">Código:</span> 110804</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_4">R$ 190</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(4, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_4">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(4, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_4">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/fone.webp" alt="Imagem de um fone bluetooth" width="200">
+                        </td>
+                        <td>
+                            <div>Fone Bluetooth</div>
+                            <div><span class="produto-item">Código:</span> 190822</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_5">R$ 50</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(5, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_5">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(5, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_5">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/mouse.webp" alt="Imagem de um Mouse Gamer" width="200">
+                        </td>
+                        <td>
+                            <div>Mouse Gamer</div>
+                            <div><span class="produto-item">Código:</span> 290604</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_6">R$ 70</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(6, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_6">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(6, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_6">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/teclado.jpg" alt="Imagem de um Teclado Gamer" width="200">
+                        </td>
+                        <td>
+                            <div>Teclado Gamer</div>
+                            <div><span class="produto-item">Código:</span> 100870</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_7">R$ 85</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(7, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_7">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(7, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_7">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/tablet.webp" alt="Imagem de um tablet" width="200">
+                        </td>
+                        <td>
+                            <div>Tablet Rafilo's</div>
+                            <div><span class="produto-item">Código:</span> 060372</div>
+                            <div><span class="produto-item">Cor:</span> Cinza</div>
+                        </td>
+                        <td id="valor_8">R$ 1.750</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(8, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_8">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(8, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_8">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/monitor.avif" alt="Imagem de um monitor" width="200">
+                        </td>
+                        <td>
+                            <div>Monitor Rafilo's</div>
+                            <div><span class="produto-item">Código:</span> 050285</div>
+                            <div><span class="produto-item">Cor:</span> Preto</div>
+                        </td>
+                        <td id="valor_9">R$ 450</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(9, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_9">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(9, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_9">0</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="img/mic.jpg" alt="Imagem de um microfone" width="200">
+                        </td>
+                        <td>
+                            <div>Microfone Rafilo's</div>
+                            <div><span class="produto-item">Código:</span> 251285</div>
+                            <div><span class="produto-item">Cor:</span> Cinza</div>
+                        </td>
+                        <td id="valor_10">R$ 65</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(10, '-')"> <i class="bi bi-dash"></i> </span>
+                            <span id="qtd_10">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(10, '+')"> <i class="bi bi-plus"></i> </span>
+                        </td>
+                        <td id="total_10">0</td>
+                    </tr>
+                    
+                </tbody>
+            </thead>
+
+        </table>
+
+        <footer class="text-center"> <i class="bi bi-cart-fill"></i>
+            <span>Subtotal: <span id="subtotal">R$ 0</span></span>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
